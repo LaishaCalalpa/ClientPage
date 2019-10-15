@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="client.css" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <script src="https://kit.fontawesome.com/0c740d4ed3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -19,44 +23,112 @@
         </nav>
     </header>
     <section class="container">
-        
-       <div class="parallax2"> </div> 
+       <div class="parallax2"><h3 id="about"></h3></div>
         
         <section class="firstbox">
-            <section>
-                <h4 id="about">ABOUT</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ipsam provident ipsa possimus natus, labore doloremque nulla dicta sequi, accusantium at non illo, accusamus optio minus. Totam a
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aspernatur quia nemo, aperiam minima tempore distinctio nihil odio, magni fugit provident accusantium. 
-                </p>
+            <section class="gallery">
+        <div class="carousel">
+      <!-- carousel locator -->
+      <input class="carousel-locator" id="slide-1" type="radio" name="carousel-radio" hidden="" checked="">
+      <input class="carousel-locator" id="slide-2" type="radio" name="carousel-radio" hidden="">
+      <input class="carousel-locator" id="slide-3" type="radio" name="carousel-radio" hidden="">
+      <input class="carousel-locator" id="slide-4" type="radio" name="carousel-radio" hidden="">
+      
+      <!-- carousel container -->
+      <div class="carousel-container">
+        <!-- carousel item -->
+        <figure class="carousel-item">
+          <label class="item-prev btn btn-action btn-lg" for="slide-4"><i class="icon icon-arrow-left"></i></label>
+          <label class="item-next btn btn-action btn-lg" for="slide-2"><i class="icon icon-arrow-right"></i></label>
+          <img class="img-responsive rounded" src="images/IMG-7285.JPG" alt="">
+        </figure>
+        <figure class="carousel-item">
+          <label class="item-prev btn btn-action btn-lg" for="slide-1"><i class="icon icon-arrow-left"></i></label>
+          <label class="item-next btn btn-action btn-lg" for="slide-3"><i class="icon icon-arrow-right"></i></label>
+          <img class="img-responsive rounded" src="images/IMG-7286.JPG" alt="">
+        </figure>
+        <figure class="carousel-item">
+          <label class="item-prev btn btn-action btn-lg" for="slide-2"><i class="icon icon-arrow-left"></i></label>
+          <label class="item-next btn btn-action btn-lg" for="slide-4"><i class="icon icon-arrow-right"></i></label>
+          <img class="img-responsive rounded" src="images/IMG-7287.JPG" alt="">
+        </figure>
+        <figure class="carousel-item">
+          <label class="item-prev btn btn-action btn-lg" for="slide-3"><i class="icon icon-arrow-left"></i></label>
+          <label class="item-next btn btn-action btn-lg" for="slide-1"><i class="icon icon-arrow-right"></i></label>
+          <img class="img-responsive rounded" src="images/IMG-7288.JPG" alt="">
+        </figure>
+    </div>
+        <!-- carousel navigation -->
+        <div class="carousel-nav">
+            <label class="nav-item text-hide c-hand" for="slide-1">1</label>
+            <label class="nav-item text-hide c-hand" for="slide-2">2</label>
+            <label class="nav-item text-hide c-hand" for="slide-3">3</label>
+            <label class="nav-item text-hide c-hand" for="slide-4">4</label>
+        </div>
+    </div>
             </section>
+            <aside>
+                <h4>ABOUT</h4>
+                <ul>
+                    <li>Capacity: 80 - 100 people</li>
+                    <li>Standard Hours: 7PM - 12AM</li>
+                    <li>Personalized Catering Offered</li>
+                </ul>
+            </aside>
         </section>
         
-        <div class="parallax"> </div>
+        <div class="parallax"></div>
         
         <section class="secondbox">
-            <aside class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</aside>
-            <aside class="gallery">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</aside>
+            <form action="#" method"post">
+                <fieldset class="event_form">
+                    <h4>Have Questions?</h4>
+                    <ul>
+                        <li>
+                            <label for="first_name">FULL NAME*</label>
+                            <input type="text" id="first_name" name="user_name" placeholder="First, Last">
+                        </li>
+                        <li>
+                            <label for="date">DATE OF EVENT*</label>
+                            <input type="text" id="date" name="event_date" placeholder="MM/DD/YYYY">
+                        </li>
+                        <li>
+                            <label for="guest">NUMBER OF GUESTS</label>
+                            <input type="text" id="guest" name="guest_num" placeholder="Number of guests">
+                        </li>    
+                        <li>
+                            <label for="email">EMAIL</label>
+                            <input type="text" id="email" name="email-address" placeholder="name@domain.com"> 
+                        </li>  
+                        <li>
+                            <label for="number">PHONE NUMBER*</label>
+                            <input type="text" id="number" name="phone-number" placeholder="Phone Number">
+                        </li> 
+                        <li>
+                            <textarea placeholder="QUESTIONS?" cols="45" rows="5"></textarea>
+                        </li>
+                    </ul>
+                </fieldset>
+            </form>
         </section>
-        
         <section class="thirdbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         </section>
-        
         
     </section>
     <footer>
         <section class="map"> 
             <p>Visit Us</p>
-            <iframe id="directions" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.74987131018!2d-74.14611808458658!3d40.855415136766204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2ff20f28a8ef3%3A0xdf6bd4de2964e150!2s503%20Van%20Houten%20Ave%2C%20Passaic%2C%20NJ%2007055!5e0!3m2!1sen!2sus!4v1570762160909!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+            <iframe id="directions" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.74987131018!2d-74.14611808458658!3d40.855415136766204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2ff20f28a8ef3%3A0xdf6bd4de2964e150!2s503%20Van%20Houten%20Ave%2C%20Passaic%2C%20NJ%2007055!5e0!3m2!1sen!2sus!4v1570762160909!5m2!1sen!2sus" width="300" height="250" frameborder="0" style="border:0;" allowfullscreen="">
             </iframe>
         </section>
         <aside class="social">
             <section>
                 <h4 id="contact">CONTACT US</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ipsam provident ipsa possimus natus, labore doloremque nulla dicta sequi, accusantium at non illo, accusamus optio minus. Totam a
-                </p>
-                <p>
+                <ul>
+                    <li> Phone: (862) 238-7100</li>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook-square"></i>
+                </ul>
             </section>
         </aside>
     </footer>
